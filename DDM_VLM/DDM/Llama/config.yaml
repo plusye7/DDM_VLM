@@ -1,0 +1,36 @@
+model:
+  path: ""
+
+data:
+  test_path: ""
+  database_path: ""
+
+examples:
+  image_path: ""
+
+retrieval:
+  index_path: ""
+
+outputs:
+  rag_dir: ""
+  direct_vlm_dir: ""
+  ddm_vlm_dir: ""
+
+rag:
+  topk: 10
+
+direct_vlm:
+  max_new_tokens: 32
+
+ddm_vlm:
+  max_rounds: 3
+  retrieval_split: [4, 3, 3]
+  example_mode: "split"
+  boundary: 1.5
+  alpha: 0.8
+  beta: 0.2
+  sigma: 0.05
+  tau: 0.05
+  evidence_clip: 3.0
+  seed: 42
+  early_stop: true
